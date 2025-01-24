@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Learning About Sensors: Sentinel-2B</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Stefan Krysa" />
+    <script src="libs/header-attrs-2.28/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Learning About Sensors: Sentinel-2B
+]
+.subtitle[
+## CASA0025 Week 2
+]
+.author[
+### Stefan Krysa
+]
+.date[
+### 2025/01/24
+]
+
+---
+
+class: center, middle, inverse
+
+# Sentinel-2B
+
+---
+
+# Summary
+
+.pull-left[
+
+In orbit since __March 7th, 2017__ 
+
+Launched by the European Space Agency as part of the __Copernicus Programme__
+
+Now __one of three Sentinel satellites__:
+- Sentinel-2A
+- Sentinel-2B
+- Sentinel-2C
+
+Quick stats:
+- 13 spectral bands
+- 10m spatial resolution for VNIR bands
+- 10-day cycle
+
+]
+
+.pull-right[
+
+&lt;img src="https://esoc.esa.int/sites/default/files/Sentinel-2_pillars%20916x700.jpg"
+     width="400" height="400px"
+     style="position:center; right:35px; top:100px;"&gt;
+
+&lt;p style="font-size:13px;"&gt;Source: &lt;a href=" https://esoc.esa.int/sites/default/files/Sentinel-2_pillars%20916x700.jpg " target="_blank"&gt;European Space Agency&lt;/a&gt;&lt;/p&gt;
+
+]
+
+---
+
+# Applications
+
+.pull-left[
+
+The European Space Agency specifies a __range of applications__ for Sentinel-2B:
+- Marine environment monitoring  
+- Land environmental monitoring
+- Emergency management service 
+- Security 
+  - Border surveillance
+  - Maritime
+  - External action
+  
+Sentinel's versatility is thanks to its relatively high spatial, spectral and temporal resolutions. 
+  
+Such a variety of functions opens up __many avenues for research__ using Sentinel-2B.
+
+]
+
+.pull-right[
+
+![slide2](/slide2.jpg)
+
+&lt;p style="font-size:13px;"&gt;Source: Canva&lt;/p&gt;
+
+]
+ 
+---
+
+# Application Example
+
+*War Related Building Damage Assessment in Kyiv, Ukraine, Using Sentinel-1 Radar and Sentinel-2 Optical Images* ([Aimaiti, Sanon, Koch et al., 2022](#bib-aimaitiWarRelatedBuilding2022))
+
+Overview:
+- Examines the performance of Sentinel-1 and Sentinel-2 data for assessing building damage in Kyiv.
+- Employs __SAR log ratio of intensity analysis__ using Sentinel-1 and __texture analysis__ using Sentinel-2.
+  - SAR: Compares microwave backscattering at two time periods to detect change.
+  - Texture analysis: Compares the spatial variation and intensity of neighboring pixels.
+- Detected building damage using Sentinel showed a good match with reference to WorldView imagery.
+
+Thoughts:
+- Highlights the opportunity to use different sensors for different types of analysis.
+- Confirms the applicability of Sentinel-2B imagery for assessing damage from man-made or environmental crises, and the potential for guiding efficient allocation resources.
+
+---
+
+# Reflection
+
+Sentinel-2B is currently one of the highest-resolution Earth observation imagery sources that is freely available to the public. There are many benefits to using Sentinel-2B imagery, but there are also important considerations. 
+
+.pull-left[
+
+Advantages:
+- Facilitates research and promotes the democratization of data. 
+- Supports an incredible range of applications across many disciplines.
+
+Concerns:
+- Increasing public accessibility to high-resolution imagery raises questions around privacy and data usage.
+  - Who is using the data and for what purposes?
+
+]
+
+.pull-right[
+
+&lt;img src="     https://www.dictionary.com/e/wp-content/uploads/2018/03/Thinking_Face_Emoji-Emoji-Island.png"
+     width="300px" height="300px"
+     style="position:center; right:10px; top:130px;"&gt;
+     
+&lt;p style="font-size:13px;"&gt;Source: &lt;a href=" https://www.dictionary.com/e/emoji/thinking-face-emoji" target="_blank"&gt;Dictionary.com&lt;/a&gt;&lt;/p&gt;
+
+]
+
+---
+
+# References
+
+Aimaiti, Y. et al. (2022) ‘War Related Building Damage Assessment in Kyiv, Ukraine, Using Sentinel-1 Radar and Sentinel-2 Optical Images’, Remote Sensing, 14(24), p. 6239. Available at: https://doi.org/10.3390/rs14246239.
+
+European Space Agency (2025) Sentinel-2, SentiWiki. Available at: https://sentiwiki.copernicus.eu/web/sentinel-2 (Accessed: 22 January 2025).
+
+---
+class: center, middle, inverse
+
+## Thank you!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
